@@ -16,9 +16,9 @@ const createUser = (email, name, hashedPwd, callback) => {
     })
 }
 
-const updateProduct = (id, name, sequence, status, callback) => {
-    const sql = "UPDATE products SET name = ?, sequence = ?, status = ? WHERE id = ?"
-    db.query(sql, [name, sequence, status, id], callback)
+const updatecategory = (id, categoryname, sequence,image, status, callback) => {
+    const sql = "UPDATE category SET categoryname = ?, sequence = ?, image = ? status = ? WHERE id = ?"
+    db.query(sql, [categoryname, sequence, image, status, id], callback)
 }
 
-module.exports = { findUserByEmail, createUser, updateProduct }
+module.exports = { findUserByEmail, createUser, updatecategory }
